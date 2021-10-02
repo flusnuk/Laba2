@@ -3,7 +3,6 @@ while True:
     words = []
     everyLet = {}
     duplicate = False
-    duplicateLet = False
     for i in text:
       for a in words:
        if i == a:
