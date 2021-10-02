@@ -1,0 +1,26 @@
+while True:
+    text = str(input('Введіть слова:')).split(' ')
+    words = []
+    everyLet = {}
+    duplicate = False
+    duplicateLet = False
+    for i in text:
+      for a in words:
+       if i == a:
+          duplicate = True
+
+      if duplicate   == True:
+       duplicate = False
+       continue
+      words.append(i)
+      duplicate = False
+    print(words)
+
+
+    letterss = "".join(words)
+
+
+    for char in set(letterss):
+        count = letterss.count(char)
+        print('{}-{}'.format(char, count))
+    print(everyLet)
