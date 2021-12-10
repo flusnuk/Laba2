@@ -1,18 +1,20 @@
-while True:
+While True:
     text = str(input('Введіть слова:')).split(' ')
     words = []
-    everyLet = {}
     duplicate = False
     for i in text:
-      for a in words:
-       if i == a:
-          duplicate = True
+        if len(i) >= 3:
+              for a in words:
+               if i == a:
+                  duplicate = True
 
-      if duplicate   == True:
-       duplicate = False
-       continue
-      words.append(i)
-      duplicate = False
+              if duplicate   == True:
+               duplicate = False
+               continue
+              words.append(i)
+              duplicate = False
+        else:
+            continue
     words.sort()
     print(words)
 
@@ -23,4 +25,3 @@ while True:
     for char in set(letterss):
         count = letterss.count(char)
         print('{}-{}'.format(char, count))
-    print(everyLet)
